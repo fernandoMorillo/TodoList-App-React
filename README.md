@@ -21,7 +21,7 @@ tareas como completadas. También incluye una funcionalidad de tareas comunes qu
 1. Clona el repositorio en tu máquina local usando `git clone`.
 
 2. Navega al directorio del proyecto.
-   cd tu-repositorio
+   cd TodoList-App-React
 3. Instala las dependencias utilizando npm o yarn.
    npm install
 
