@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import Container from "./components/Container";
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import TareasFrecuentes from "./components/TareasFrecuentes";
+import TareasPendientes from "./components/TareasPendientes";
+import TareasCompletadas from "./components/TareasCompletadas";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            {/*<Container/>*/}
+
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Container/>}/>
+                    <Route path="/tareas/pendientes" element={<TareasPendientes/>}/>
+                    <Route path="/tareas/completadas" element={<TareasCompletadas/>}/>
+                    <Route path="/tareas/frecuentes" element={<TareasFrecuentes/>}/>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
