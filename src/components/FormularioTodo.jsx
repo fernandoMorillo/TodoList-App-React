@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { BsFillBookmarkPlusFill } from "react-icons/bs";
 const FormularioTodo = ({ handleAgregar }) => {
     const [descriptionInput, setDescriptionInput] = useState("");
 
@@ -35,7 +35,7 @@ const FormularioTodo = ({ handleAgregar }) => {
                     />
 
                     <button className="button pink" disabled={!descriptionInput}>
-                        Agregar
+                        <BsFillBookmarkPlusFill  size={20}/> Agregar
                     </button>
                 </div>
             </div>
