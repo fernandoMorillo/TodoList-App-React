@@ -2,6 +2,9 @@
     --main-color: #000000;
     --secondary-color: #008000FF;
     --third-color: #ffffff;
+    --fuente-page: 'Comfortaa', cursive;
+    --sombras: 0 0 4px -1px #0000004d;
+    --gaps: 10px;
 }
 
 html {
@@ -13,7 +16,7 @@ html {
 body {
     width: 100%;
     margin: auto;
-    font-family: 'Comfortaa', cursive;
+    font-family: var(--fuente-page);
 }
 
 ul {
@@ -21,7 +24,6 @@ ul {
 }
 
 .App {
-    font-family: sans-serif;
     text-align: center;
 }
 
@@ -31,7 +33,7 @@ form {
     background-color: var(--third-color);
     padding: 50px;
     border-radius: 12px;
-    box-shadow: 0px 0px 4px -1px #0000004d;
+    box-shadow: var(--sombras);
 }
 
 .file-input {
@@ -54,8 +56,8 @@ form {
     outline: none;
 }
 
-.file-input button {
-    height: 34px;
+.file-input > button {
+    height: 34px !important;
     width: 132px;
     border-color: var(--secondary-color);
     border-radius: 5px;
@@ -68,17 +70,13 @@ form {
 }
 
 .todo--list {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: center;*/
     margin-top: 20px;
-    /*gap: 15px;*/
 }
 
 .todo--list__info {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: var(--gaps);
 }
 
 .news-item {
@@ -86,11 +84,11 @@ form {
     width: 33%;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 4px -1px #0000004d;
+    box-shadow: var(--sombras);
     padding: 20px;
     margin: 0 auto 10px auto;
     border-radius: 12px;
-    gap: 10px;
+    gap: var(--gaps);
     font-size: 19px;
 
 }
@@ -103,7 +101,7 @@ form {
 .todo--list__options {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: var(--gaps);
     margin-top: 20px;
     flex-wrap: wrap;
 }
@@ -113,7 +111,7 @@ form {
 }
 
 .button {
-    height: 35px !important;
+    height: 32px !important;
     border-radius: 7px;
     color: var(--third-color);
     border: none;
@@ -122,6 +120,8 @@ form {
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    font-family: var(--fuente-page);
 }
 
 .button--completed {
@@ -154,6 +154,10 @@ form {
 @media only screen and (min-width: 320px) and (max-width: 768px) {
     h1 {
         font-size: 25px;
+    }
+
+    h3 {
+        font-size: 12px;
     }
 
     form {

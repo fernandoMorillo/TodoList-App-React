@@ -1,9 +1,9 @@
 import Container from "./components/Container";
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import TareasFrecuentes from "./components/TareasFrecuentes";
-import TareasPendientes from "./components/TareasPendientes";
-import TareasCompletadas from "./components/TareasCompletadas";
+import TareasFrecuentes from "./pages/TareasFrecuentes";
+import TareasPendientes from "./pages/TareasPendientes";
+import TareasCompletadas from "./pages/TareasCompletadas";
 
 
 function App() {
